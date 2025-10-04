@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Pasos Firmes</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #004080;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    main {
+      padding: 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    section {
+      background-color: white;
+      margin-bottom: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      padding: 20px;
+    }
+
+    h2 {
+      color: #004080;
+    }
+
+    button {
+      background-color: #004080;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+
+    button:hover {
+      background-color: #0059b3;
+    }
+
+    .contenido {
+      display: none;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Pasos Firmes</h1>
+    <p>Un enfoque sólido hacia la investigación</p>
+  </header>
+
+  <main>
+    <!-- Sección 1 -->
+    <section>
+      <h2>1. Planteamiento del problema</h2>
+      <button onclick="toggleContenido('problema')">Mostrar/Ocultar contenido</button>
+      <div class="contenido" id="problema">
+        <p>
+            Los principales consumidores del negocio son personas de 45 años en adelante, por lo cual los diseños son atractivos para el consumidor, sin embargo se genero una problematica, el cual es la comodidad del consumidor al llevar puesto el calzado durante horas, lo cual genera incomodidad y cansancio en los pies y esto genera un disgusto por parte del consumidor.
+        </p>
+      </div>
+    </section>
+
+    <!-- Sección 2 -->
+    <section>
+      <h2>2. Pregunta de investigación</h2>
+      <button onclick="toggleContenido('pregunta')">Mostrar/Ocultar contenido</button>
+      <div class="contenido" id="pregunta">
+        <p>
+          ¿Qué estrategia se puede implementar para mejorar la comodidad del calzado y asi obtener la sastifacción del cliente?
+        </p>
+      </div>
+    </section>
+
+    <!-- Sección 3 -->
+    <section>
+      <h2>3. Justificación</h2>
+      <button onclick="toggleContenido('justificacion')">Mostrar/Ocultar contenido</button>
+      <div class="contenido" id="justificacion">
+        <p>
+          Esta investigación es relevante porque permite identificar las deficiencias del calzado, para asi poder cubrir las necesidades y requerimientos del consumidor, obteniendo asi la sastifacción del consumidor y mejora de ventas.
+        </p>
+      </div>
+    </section>
+
+    <!-- Sección 4 -->
+    <section>
+      <h2>4. Objetivos</h2>
+      <button onclick="toggleContenido('objetivos')">Mostrar/Ocultar contenido</button>
+      <div class="contenido" id="objetivos">
+        <ul>
+          General: 
+
+          <li>Diseñar una estrategia para resolver la problematica sobre la baja comodidad del calzado.</li>
+          Específicos:
+         <li>Mejorar la calidad de materia prima.</li>
+         <li>Mejorar el diseño del calzado de acuerdo a los diferentes tipos de consumidores.</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    function toggleContenido(id) {
+      var contenido = document.getElementById(id);
+      if (contenido.style.display === "none" || contenido.style.display === "") {
+        contenido.style.display = "block";
+      } else {
+        contenido.style.display = "none";
+      }
+    }
+  </script>
+
+</body>
+</html>
