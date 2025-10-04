@@ -5,7 +5,29 @@
 <head>
   <meta charset="UTF-8">
   <title>Pasos Firmes</title>
+  
   <style>
+    .titulo-con-icono {
+    display: flex; /* Permite colocar elementos uno al lado del otro */
+    justify-content: center; /* Centra horizontalmente todo el bloque */
+    align-items: center; /* Centra verticalmente la imagen con el texto */
+    width: 100%;
+      max-width: 1200px;
+      margin-left: 120px;
+      padding: 0 20px;
+    }
+
+    .titulo-con-icono h1 {
+      margin: 0;
+      color: #f5f8fd;
+      font-size: 2.5em;
+    }
+
+    .icono-titulo {
+      height: 60px;
+      width: auto;
+}
+
     body {
       font-family: Arial, sans-serif;
       background-color: #f2f2f2;
@@ -14,7 +36,7 @@
     }
 
     header {
-      background-color: #004080;
+      background-color: #02468a;
       color: white;
       padding: 20px;
       text-align: center;
@@ -60,11 +82,13 @@
 </head>
 <body>
 
-  <header>
-    <h1>Pasos Firmes</h1>
-    <p>Un enfoque sólido hacia la investigación</p>
-  </header>
 
+  <header>
+    <div class="titulo-con-icono">
+    <h1>Pasos Firmes</h1>
+    <img src="logotipo paso.png" alt="Icono de calzado" class="icono-titulo">
+  </header>
+</div>
   <main>
     <!-- Sección 1 -->
     <section>
