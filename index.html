@@ -1,154 +1,253 @@
 <!DOCTYPE html>
 <!DOCTYPE html>
 <!DOCTYPE html>
+<!DOCTYPE html>
+<!DOCTYPE html>
+<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Pasos Firmes</title>
-  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pasos Firmes - Calzado</title>
   <style>
-    header {
-      display: flex;
-      align-items: center;
-      justify-content:center;
-      background-color: #004080;
-      color: white;
-      padding: 10px 20px;
-      position: relative;
-    }
-
-    .logo {
-      position: absolute;
-      left: 20px;
-      height: 60px;
-      width: auto;
-    }
-img { width:90px; height: auto; }
-    .contenedor.titulo {
-         display: flex;
-      align-items:center;
-      justify-content:center;
-      height: 100px;
-     
-      }
-
     body {
       font-family: Arial, sans-serif;
-      background-color: #f2f2f2;
       margin: 0;
       padding: 0;
+      background-color: #f9f9f9;
     }
 
+    header {
+      background-color: #222;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+    }
 
     main {
       padding: 20px;
-      max-width: 900px;
-      margin: auto;
     }
 
-    section {
-      background-color: white;
-      margin-bottom: 20px;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      padding: 20px;
+    .productos {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
     }
 
-    h2 {
-      color: #004080;
+    .producto {
+      background: white;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      padding: 15px;
+      width: 250px;
+      text-align: center;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    }
+
+    .producto img {
+      width: 100%;
+      height: auto;
+      border-radius: 5px;
+    }
+
+    .producto h3 {
+      margin: 10px 0 5px;
+    }
+
+    .producto p {
+      margin: 5px 0;
     }
 
     button {
-      background-color: #004080;
+      background-color: #28a745;
       color: white;
       border: none;
-      padding: 10px 15px;
-      border-radius: 5px;
-      cursor: pointer;
+      padding: 10px;
       margin-top: 10px;
+      cursor: pointer;
+      border-radius: 5px;
     }
 
     button:hover {
-      background-color: #0059b3;
+      background-color: #218838;
     }
 
-    .contenido {
-      display: none;
+    #carrito, #pago {
+      margin-top: 40px;
+      background: #fff;
+      padding: 20px;
+      border-radius: 5px;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    #carrito ul {
+      list-style-type: none;
+      padding: 0;
+    }
+
+    #carrito li {
+      padding: 5px 0;
+      border-bottom: 1px solid #ccc;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    form label {
       margin-top: 10px;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+
+    form input, form select {
+      padding: 8px;
+      font-size: 16px;
+    }
+
+    footer {
+      text-align: center;
+      padding: 15px;
+      background-color: #eee;
+      margin-top: 40px;
     }
   </style>
 </head>
 <body>
 
-
   <header>
-    
-    <img src="logotipo paso.png" class="icono-titulo">
-    <div class="icono-titulo">
-        
     <h1>Pasos Firmes</h1>
-    </div>
+    <nav>
+      <a href="#catalogo">Catálogo</a>
+      <a href="#carrito">Carrito</a>
+      <a href="#pago">Pago</a>
+    </nav>
   </header>
 
   <main>
-    <!-- Sección 1 -->
-    <section>
-      <h2>1. Planteamiento del problema</h2>
-      <button onclick="toggleContenido('problema')">Mostrar/Ocultar contenido</button>
-      <div class="contenido" id="problema">
-        <p>
-            Los principales consumidores del negocio son personas de 45 años en adelante, por lo que los diseños son visualmente atractivos, sin embargo surge una problematica, la cual es la comodidad del consumidor tras un uso prolongado del calzado, por consecuencia se presenta inconformidad y afecta el nivel de satisfacción.
-        </p>
+    <section id="catalogo">
+      <h2 style="text-align:center;">Catálogo de Calzado</h2>
+      <div class="productos">
+        <div class="producto">
+          <img src="descarga.jpg" alt="Zapato Deportivo">
+          <h3>Zapato Deportivo</h3>
+          <p>Precio: $599</p>
+          <button onclick="agregarAlCarrito('Zapato Deportivo', 599)">Agregar al carrito</button>
+        </div>
+        <div class="producto">
+          <img src="descarga.jpg.jpeg" alt="Zapato Formal">
+          <h3>Zapato Formal</h3>
+          <p>Precio: $699</p>
+          <button onclick="agregarAlCarrito('Zapato Formal', 699)">Agregar al carrito</button>
+        </div>
+        <div class="producto">
+          <img src="descargaaa.jpg" alt="Zapato Casual">
+          <h3>Zapato Casual</h3>
+          <p>Precio: $769</p>
+          <button onclick="agregarAlCarrito('Zapato Casual', 769)">Agregar al carrito</button>
+        </div>
       </div>
     </section>
 
-    <!-- Sección 2 -->
-    <section>
-      <h2>2. Pregunta de investigación</h2>
-      <button onclick="toggleContenido('pregunta')">Mostrar/Ocultar contenido</button>
-      <div class="contenido" id="pregunta">
-        <p>
-          ¿Qué estrategia se puede implementar para mejorar la comodidad del calzado y asi obtener la sastifacción del cliente?
-        </p>
-      </div>
+    <section id="carrito">
+      <h2>Carrito de Compras</h2>
+      <ul id="lista-carrito"></ul>
+      <p id="total">Total: $0</p>
+      <button onclick="irAPago()">Ir a pagar</button>
     </section>
 
-    <!-- Sección 3 -->
-    <section>
-      <h2>3. Justificación</h2>
-      <button onclick="toggleContenido('justificacion')">Mostrar/Ocultar contenido</button>
-      <div class="contenido" id="justificacion">
-        <p>
-          Esta investigación es relevante porque permite identificar las deficiencias del calzado, para asi poder cubrir las necesidades y requerimientos del consumidor, obteniendo asi la sastifacción del consumidor y mejora de ventas.
-        </p>
-      </div>
-    </section>
+    <section id="pago" style="display: none;">
+      <h2>Formulario de Pago</h2>
+      <form onsubmit="confirmarPago(event)">
+        <label for="nombre">Nombre completo:</label>
+        <input type="text" id="nombre" required>
 
-    <!-- Sección 4 -->
-    <section>
-      <h2>4. Objetivos</h2>
-      <button onclick="toggleContenido('objetivos')">Mostrar/Ocultar contenido</button>
-      <div class="contenido" id="objetivos">
-        <ul>
-          General: 
+        <label for="direccion">Dirección:</label>
+        <input type="text" id="direccion" required>
 
-          <li>Diseñar una estrategia para resolver la problematica sobre la baja comodidad del calzado.</li>
-          Específicos:
-         <li>Mejorar la calidad de materia prima.</li>
-         <li>Mejorar el diseño del calzado de acuerdo a los diferentes tipos de consumidores.</li>
-        </ul>
-      </div>
+        <label for="metodo">Método de pago:</label>
+        <select id="metodo" required>
+          <option value="">Seleccione una opción</option>
+          <option value="tarjeta">Tarjeta de crédito</option>
+          <option value="paypal">PayPal</option>
+          <option value="efectivo">Pago en efectivo</option>
+        </select>
+
+        <button type="submit">Confirmar pago</button>
+      </form>
     </section>
   </main>
 
+  <footer>
+    <p>&copy; Todos los derechos reservados.</p>
+  </footer>
+
   <script>
-    function toggleContenido(id) {
-      var contenido = document.getElementById(id);
-      if (contenido.style.display === "none" || contenido.style.display === "") {
-        contenido.style.display = "block";
-      } else {
-        contenido.style.display = "none";
+    let carrito = [];
+    let total = 0;
+
+    function agregarAlCarrito(nombre, precio) {
+      carrito.push({ nombre, precio });
+      total += precio;
+      actualizarCarrito();
+    }
+
+    function actualizarCarrito() {
+      const lista = document.getElementById("lista-carrito");
+      const totalElemento = document.getElementById("total");
+
+      lista.innerHTML = "";
+
+      carrito.forEach((item, index) => {
+        const li = document.createElement("li");
+        li.textContent = `${item.nombre} - $${item.precio}`;
+        lista.appendChild(li);
+      });
+
+      totalElemento.textContent = `Total: $${total}`;
+    }
+
+    function irAPago() {
+      if (carrito.length === 0) {
+        alert("Tu carrito está vacío.");
+        return;
       }
+      document.getElementById("pago").style.display = "block";
+      window.location.href = "#pago";
+    }
+
+    function confirmarPago(event) {
+      event.preventDefault();
+      const nombre = document.getElementById("nombre").value;
+      const direccion = document.getElementById("direccion").value;
+      const metodo = document.getElementById("metodo").value;
+
+      if (!nombre || !direccion || !metodo) {
+        alert("Por favor completa todos los campos.");
+        return;
+      }
+
+      alert(`Gracias por tu compra, ${nombre}.\nTu pedido será enviado a: ${direccion}.\nMétodo de pago: ${metodo}.`);
+
+      // Resetear carrito y formulario
+      carrito = [];
+      total = 0;
+      actualizarCarrito();
+      document.getElementById("pago").style.display = "none";
+      document.querySelector("form").reset();
+      window.location.href = "#catalogo";
     }
   </script>
 
